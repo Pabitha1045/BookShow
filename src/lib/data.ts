@@ -1,3 +1,4 @@
+
 import type { Event, Booking, UserProfile } from './types';
 
 export const allEvents: Event[] = [
@@ -35,7 +36,7 @@ export const allEvents: Event[] = [
     time: '20:00',
     venue: 'Prestige Theaters',
     price: 20,
-    imageUrl: 'https://th.bing.com/th/id/OIP.IvYFsRsfF1ENNumLVDZbbQHaLH?w=204&h=306&c=7&r=0&o=7&cb=ucfimg2&dpr=1.3&pid=1.7&rm=3&ucfimg=1',
+    imageUrl: 'https://th.bing.com/th/id/OIP.mNJ8t8gUX2ASbPTkAstHpwHaLH?w=204&h=306&c=7&r=0&o=7&cb=ucfimg2&dpr=1.3&pid=1.7&rm=3&ucfimg=1',
     imageHint: 'spy action',
     synopsis: 'A special agent investigates a murder committed by a masked group of serial killers. However, a tangled web of clues leads him to the drug kingpin of Chennai.',
     seating: { rows: 9, cols: 15, unavailable: ['G1', 'G2', 'H5', 'I12'] },
