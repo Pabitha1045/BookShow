@@ -2,17 +2,9 @@
 
 import Link from 'next/link';
 import { usePathname, useSearchParams, useRouter } from 'next/navigation';
-import {
-  Film,
-  Home,
-  Menu,
-  Search,
-} from 'lucide-react';
+import { Film, Home, Menu, Search } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import {
-  Avatar,
-  AvatarFallback,
-} from '@/components/ui/avatar';
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import {
   DropdownMenu,
@@ -27,14 +19,14 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Logo } from '../icons';
 import { useDebouncedCallback } from 'use-debounce';
 import { userProfile } from '@/lib/data';
+import { Suspense } from 'react';
 
 const navLinks = [
   { href: '/', label: 'Home', icon: Home },
   { href: '/#movies', label: 'Movies', icon: Film },
 ];
 
-export function Header() {
-  const pathname = usePathname();
+function HeaderSearch() {
   const searchParams = useSearchParams();
   const { replace } = useRouter();
 
@@ -49,6 +41,22 @@ export function Header() {
     replace(`/?${params.toString()}`);
   }, 300);
 
+  return (
+    <div className="relative ml-auto flex-1 sm:flex-initial">
+      <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
+      <Input
+        type="search"
+        placeholder="Search events..."
+        className="pl-8 sm:w-[300px] md:w-[200px] lg:w-[300px]"
+        onChange={(e) => handleSearch(e.target.value)}
+        defaultValue={searchParams.get('search')?.toString()}
+      />
+    </div>
+  );
+}
+
+export function Header() {
+  const pathname = usePathname();
 
   const navItems = (
     <>
@@ -107,16 +115,9 @@ export function Header() {
 
 
       <div className="flex w-full items-center gap-4 md:ml-auto md:w-auto md:flex-initial">
-        <div className="relative ml-auto flex-1 sm:flex-initial">
-          <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
-          <Input
-            type="search"
-            placeholder="Search events..."
-            className="pl-8 sm:w-[300px] md:w-[200px] lg:w-[300px]"
-            onChange={(e) => handleSearch(e.target.value)}
-            defaultValue={searchParams.get('search')?.toString()}
-          />
-        </div>
+        <Suspense fallback={<div className="sm:w-[300px] md:w-[200px] lg:w-[300px]" />}>
+          <HeaderSearch />
+        </Suspense>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="secondary" size="icon" className="rounded-full">
