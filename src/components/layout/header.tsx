@@ -6,11 +6,7 @@ import {
   Film,
   Home,
   Menu,
-  Music,
   Search,
-  Ticket,
-  User,
-  Clapperboard
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import {
@@ -34,9 +30,6 @@ import { Logo } from '../icons';
 const navLinks = [
   { href: '/', label: 'Home', icon: Home },
   { href: '/#movies', label: 'Movies', icon: Film },
-  { href: '/#concerts', label: 'Concerts', icon: Music },
-  { href: '/#theatre', label: 'Theatre', icon: Clapperboard },
-  { href: '/#sports', label: 'Sports', icon: Ticket },
 ];
 
 export function Header() {

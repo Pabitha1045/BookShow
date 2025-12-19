@@ -13,11 +13,10 @@ export default function HomePage({
   searchParams?: { [key: string]: string | string[] | undefined };
 }) {
   const searchTerm = typeof searchParams?.search === 'string' ? searchParams.search.toLowerCase() : '';
-  const category = typeof searchParams?.category === 'string' ? searchParams.category : 'all';
-
+  
   const filteredEvents: Event[] = allEvents.filter(event => {
     const matchesSearch = searchTerm ? event.title.toLowerCase().includes(searchTerm) : true;
-    const matchesCategory = category !== 'all' ? event.category.toLowerCase() === category : true;
+    const matchesCategory = event.category === 'Movie';
     return matchesSearch && matchesCategory;
   });
 
@@ -26,10 +25,10 @@ export default function HomePage({
       <section className="bg-card py-12 md:py-20">
         <div className="container mx-auto px-4 md:px-6 text-center">
             <h1 className="font-headline text-3xl md:text-5xl font-bold tracking-tight text-primary">
-              Find Your Next Experience
+              Find Your Next Movie
             </h1>
             <p className="text-muted-foreground max-w-2xl mx-auto mt-4 text-lg">
-              Discover and book tickets for the best movies, concerts, and shows happening near you.
+              Discover and book tickets for the best movies happening near you.
             </p>
         </div>
       </section>
@@ -49,7 +48,7 @@ export default function HomePage({
         <Separator className="my-12" />
 
         <div>
-          <h2 className="font-headline text-3xl font-bold mb-6" id="events">Upcoming Events</h2>
+          <h2 className="font-headline text-3xl font-bold mb-6" id="events">Upcoming Movies</h2>
           <EventList events={filteredEvents} />
         </div>
       </main>
