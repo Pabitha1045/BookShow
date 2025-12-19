@@ -115,7 +115,7 @@ export function Header() {
 
 
       <div className="flex w-full items-center gap-4 md:ml-auto md:w-auto md:flex-initial">
-        <Suspense fallback={<div className="sm:w-[300px] md:w-[200px] lg:w-[300px]" />}>
+        <Suspense fallback={<div className="h-9 w-full sm:w-[300px] md:w-[200px] lg:w-[300px]" />}>
           <HeaderSearch />
         </Suspense>
         <DropdownMenu>
