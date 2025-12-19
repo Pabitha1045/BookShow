@@ -39,15 +39,6 @@ export default function HomePage({
         <Separator className="my-12" />
 
         <div>
-          <h2 className="font-headline text-3xl font-bold mb-6" id="recommendations">Just For You</h2>
-          <Suspense fallback={<RecommendationsSkeleton />}>
-            <Recommendations />
-          </Suspense>
-        </div>
-
-        <Separator className="my-12" />
-
-        <div>
           <h2 className="font-headline text-3xl font-bold mb-6" id="events">Upcoming Movies</h2>
           <EventList events={filteredEvents} />
         </div>
