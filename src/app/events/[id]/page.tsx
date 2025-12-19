@@ -69,7 +69,7 @@ export default function EventDetailPage() {
         </div>
         
         <Button asChild size="lg" className="w-full md:w-auto bg-accent hover:bg-accent/90 text-accent-foreground text-lg py-6">
-            <Link href={upiLink}>
+            <Link href={`/events/${id}/book`}>
                 <Ticket className="mr-2 h-6 w-6"/>
                 Book Now from ₹{event.price}
             </Link>
