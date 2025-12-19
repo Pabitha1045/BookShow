@@ -48,7 +48,7 @@ export const allEvents: Event[] = [
     time: '18:30',
     venue: 'Royal Picturehouse',
     price: 22,
-    imageUrl: 'https://tse1.mm.bing.net/th/id/OIP.yc2udXvfdvvHRsG9-7U0wAHaLH?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3',
+    imageUrl: 'https://tse1.mm.bing.net/th/id/OIP.yc2udXvfdvvHRsG9-7U0wAHaLH?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm',
     imageHint: 'historical drama',
     synopsis: 'Vandiyathevan sets out to cross the Chola land to deliver a message from the Crown Prince Aditha Karikalan. The land is rife with conspiracies and he is tasked with a mission that could change the fate of the Chola dynasty.',
     seating: { rows: 10, cols: 10, unavailable: ['B2', 'C8', 'D4', 'J9'] },
