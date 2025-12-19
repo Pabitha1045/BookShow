@@ -1,7 +1,6 @@
 import {
   Avatar,
   AvatarFallback,
-  AvatarImage,
 } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import {
@@ -25,7 +24,6 @@ export default function AccountPage() {
     <div className="container mx-auto max-w-4xl py-8 px-4 md:px-6 animate-in fade-in-50 duration-500">
       <div className="flex items-center gap-6 mb-8">
         <Avatar className="h-24 w-24 border-2 border-primary">
-          <AvatarImage src="https://picsum.photos/seed/avatar1/100/100" />
           <AvatarFallback>
             {userProfile.name
               .split(' ')

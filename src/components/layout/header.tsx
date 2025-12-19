@@ -12,7 +12,6 @@ import { cn } from '@/lib/utils';
 import {
   Avatar,
   AvatarFallback,
-  AvatarImage,
 } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import {
@@ -122,7 +121,6 @@ export function Header() {
           <DropdownMenuTrigger asChild>
             <Button variant="secondary" size="icon" className="rounded-full">
               <Avatar>
-                <AvatarImage src="https://picsum.photos/seed/avatar1/100/100" alt={userProfile.name} />
                 <AvatarFallback>
                   {userProfile.name
                     .split(' ')
