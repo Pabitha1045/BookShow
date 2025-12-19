@@ -22,7 +22,7 @@ export const allEvents: Event[] = [
     time: '21:00',
     venue: 'Grand Cineplex',
     price: 18,
-    imageUrl: '/images/leo.jpg',
+    imageUrl: 'https://images.filmibeat.com/ph-big/2025/06/param-sundari1749121161_0.jpeg',
     imageHint: 'thriller movie',
     synopsis: 'A cafe owner becomes a local hero, but his past actions stir a world of trouble from a drug cartel who claim he was once one of them.',
     seating: { rows: 6, cols: 10, unavailable: ['A1', 'B5', 'E7', 'E8'] },
