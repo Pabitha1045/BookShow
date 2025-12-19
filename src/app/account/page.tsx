@@ -62,7 +62,7 @@ export default function AccountPage() {
                       <p className="text-sm text-muted-foreground">Seats: {booking.seats.join(', ')}</p>
                     </div>
                     <div className="text-right">
-                        <p className="font-bold text-lg">${booking.totalPrice.toFixed(2)}</p>
+                        <p className="font-bold text-lg">₹{booking.totalPrice.toFixed(2)}</p>
                         <Button variant="outline" size="sm" asChild className="mt-2">
                             <Link href={`/events/${booking.eventId}`}>View Event</Link>
                         </Button>

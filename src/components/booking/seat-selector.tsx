@@ -112,7 +112,7 @@ export function SeatSelector({ event }: SeatSelectorProps) {
                     </div>
                     <div className="text-right">
                         <p className="font-semibold">Total Price:</p>
-                        <p className="text-2xl font-bold font-headline">${totalPrice.toFixed(2)}</p>
+                        <p className="text-2xl font-bold font-headline">₹{totalPrice.toFixed(2)}</p>
                     </div>
                 </div>
             </CardContent>

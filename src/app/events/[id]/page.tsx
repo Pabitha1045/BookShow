@@ -22,6 +22,9 @@ export default function EventDetailPage({ params }: { params: { id: string } }) 
     notFound();
   }
 
+  const upiLink = `upi://pay?pa=recipient@bank&pn=Recipient%20Name&am=${event.price}&cu=INR&tn=Booking%20for%20${encodeURIComponent(event.title)}`;
+
+
   return (
     <div className="container mx-auto max-w-5xl py-8 px-4 md:px-6 animate-in fade-in-50 duration-500">
       <div className="space-y-6">
@@ -62,9 +65,9 @@ export default function EventDetailPage({ params }: { params: { id: string } }) 
         </div>
         
         <Button asChild size="lg" className="w-full md:w-auto bg-accent hover:bg-accent/90 text-accent-foreground text-lg py-6">
-            <Link href={`/events/${event.id}/book`}>
+            <Link href={upiLink}>
                 <Ticket className="mr-2 h-6 w-6"/>
-                Book Now from ${event.price}
+                Book Now from ₹{event.price}
             </Link>
         </Button>
 
