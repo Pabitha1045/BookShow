@@ -15,25 +15,6 @@ import { Separator } from '@/components/ui/separator';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 
-// Mock reviews for demonstration
-const mockReviews = [
-  {
-    id: '1',
-    author: 'Anjali Kumar',
-    rating: 5,
-    text: 'What a masterpiece! The direction and acting were top-notch. A must-watch for all cinema lovers.',
-    date: '2024-08-16',
-  },
-  {
-    id: '2',
-    author: 'Rohan Sharma',
-    rating: 4,
-    text: 'A great action entertainer. The second half was a bit slow, but the climax was mind-blowing.',
-    date: '2024-08-17',
-  },
-];
-
-
 export default function EventDetailPage({ params }: { params: { id: string } }) {
   const event = allEvents.find((e) => e.id === params.id);
 
@@ -104,29 +85,6 @@ export default function EventDetailPage({ params }: { params: { id: string } }) 
                   <Button>Submit Review</Button>
               </CardContent>
             </Card>
-
-            <div className="space-y-6">
-                {mockReviews.map(review => (
-                    <Card key={review.id} className="bg-background">
-                        <CardHeader className="p-4">
-                            <div className="flex justify-between items-start">
-                                <div>
-                                    <CardTitle className="text-lg">{review.author}</CardTitle>
-                                    <CardDescription>{new Date(review.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</CardDescription>
-                                </div>
-                                <div className="flex items-center gap-1 text-amber-500">
-                                    {[...Array(5)].map((_, i) => (
-                                        <Star key={i} className={`w-5 h-5 ${i < review.rating ? 'fill-current' : 'fill-muted stroke-muted-foreground'}`} />
-                                    ))}
-                                </div>
-                            </div>
-                        </CardHeader>
-                        <CardContent className="p-4 pt-0">
-                            <p className="text-muted-foreground">{review.text}</p>
-                        </CardContent>
-                    </Card>
-                ))}
-            </div>
         </div>
 
       </div>
