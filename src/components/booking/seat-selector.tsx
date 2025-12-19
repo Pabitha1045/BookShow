@@ -1,19 +1,18 @@
 'use client';
 
-import { useState } from 'react';
 import { Armchair, Tv, Square } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import type { Event } from '@/lib/types';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
-import { Button } from '../ui/button';
 import { Separator } from '../ui/separator';
 
 interface SeatSelectorProps {
   event: Event;
+  selectedSeats: string[];
+  onSelectedSeatsChange: (seats: string[]) => void;
 }
 
-export function SeatSelector({ event }: SeatSelectorProps) {
-  const [selectedSeats, setSelectedSeats] = useState<string[]>([]);
+export function SeatSelector({ event, selectedSeats, onSelectedSeatsChange }: SeatSelectorProps) {
   const { seating, price } = event;
 
   if (!seating) {
@@ -41,10 +40,10 @@ export function SeatSelector({ event }: SeatSelectorProps) {
   );
 
   const toggleSeat = (seatId: string) => {
-    setSelectedSeats((prev) =>
-      prev.includes(seatId)
-        ? prev.filter((s) => s !== seatId)
-        : [...prev, seatId]
+    onSelectedSeatsChange(
+      selectedSeats.includes(seatId)
+        ? selectedSeats.filter((s) => s !== seatId)
+        : [...selectedSeats, seatId]
     );
   };
 

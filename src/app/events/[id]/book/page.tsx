@@ -1,16 +1,22 @@
+'use client';
+
 import { notFound } from 'next/navigation';
 import { allEvents } from '@/lib/data';
 import { Calendar, Clock, MapPin } from 'lucide-react';
 import { SeatSelector } from '@/components/booking/seat-selector';
 import { PaymentForm } from '@/components/booking/payment-form';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
+import { useState } from 'react';
 
 export default function BookingPage({ params }: { params: { id: string } }) {
   const event = allEvents.find((e) => e.id === params.id);
+  const [selectedSeats, setSelectedSeats] = useState<string[]>([]);
 
   if (!event) {
     notFound();
   }
+
+  const totalPrice = selectedSeats.length * (event.price || 0);
 
   return (
     <div className="container mx-auto max-w-6xl py-8 px-4 md:px-6 animate-in fade-in-50 duration-500">
@@ -18,8 +24,12 @@ export default function BookingPage({ params }: { params: { id: string } }) {
       <div className="grid lg:grid-cols-3 gap-8">
         
         <div className="lg:col-span-2 space-y-8">
-          <SeatSelector event={event} />
-          <PaymentForm />
+          <SeatSelector 
+            event={event} 
+            selectedSeats={selectedSeats}
+            onSelectedSeatsChange={setSelectedSeats}
+          />
+          <PaymentForm totalPrice={totalPrice} eventTitle={event.title} />
         </div>
 
         <div className="lg:col-span-1">
