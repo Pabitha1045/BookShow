@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useSearchParams, useRouter } from 'next/navigation';
 import {
   Film,
   Home,
@@ -26,6 +26,7 @@ import {
 import { Input } from '@/components/ui/input';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Logo } from '../icons';
+import { useDebouncedCallback } from 'use-debounce';
 
 const navLinks = [
   { href: '/', label: 'Home', icon: Home },
@@ -34,6 +35,20 @@ const navLinks = [
 
 export function Header() {
   const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const { replace } = useRouter();
+
+  const handleSearch = useDebouncedCallback((term: string) => {
+    const params = new URLSearchParams(searchParams);
+    if (term) {
+      params.set('search', term);
+    } else {
+      params.delete('search');
+    }
+    // currently we only search on the homepage
+    replace(`/?${params.toString()}`);
+  }, 300);
+
 
   const navItems = (
     <>
@@ -92,16 +107,16 @@ export function Header() {
 
 
       <div className="flex w-full items-center gap-4 md:ml-auto md:w-auto md:flex-initial">
-        <form className="ml-auto flex-1 sm:flex-initial">
-          <div className="relative">
-            <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
-            <Input
-              type="search"
-              placeholder="Search events..."
-              className="pl-8 sm:w-[300px] md:w-[200px] lg:w-[300px]"
-            />
-          </div>
-        </form>
+        <div className="relative ml-auto flex-1 sm:flex-initial">
+          <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
+          <Input
+            type="search"
+            placeholder="Search events..."
+            className="pl-8 sm:w-[300px] md:w-[200px] lg:w-[300px]"
+            onChange={(e) => handleSearch(e.target.value)}
+            defaultValue={searchParams.get('search')?.toString()}
+          />
+        </div>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="secondary" size="icon" className="rounded-full">
