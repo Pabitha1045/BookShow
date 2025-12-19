@@ -16,7 +16,7 @@ export const allEvents: Event[] = [
   },
   {
     id: '2',
-    title: 'Leo',
+    title: 'Param Sundari',
     category: 'Movie',
     date: '2024-10-18',
     time: '21:00',
