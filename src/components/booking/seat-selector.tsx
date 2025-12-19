@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Armchair, Screen, Square } from 'lucide-react';
+import { Armchair, Tv, Square } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import type { Event } from '@/lib/types';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
@@ -58,7 +58,7 @@ export function SeatSelector({ event }: SeatSelectorProps) {
         </CardHeader>
       <CardContent className="flex flex-col items-center gap-8">
         <div className="w-full max-w-md flex flex-col items-center gap-2">
-            <Screen className="w-1/2 h-auto text-muted-foreground"/>
+            <Tv className="w-1/2 h-auto text-muted-foreground"/>
             <p className="text-sm text-muted-foreground">Screen</p>
         </div>
         
