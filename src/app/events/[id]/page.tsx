@@ -1,5 +1,7 @@
+'use client';
+
 import Link from 'next/link';
-import { notFound } from 'next/navigation';
+import { notFound, useParams } from 'next/navigation';
 import { Calendar, Clock, MapPin, Ticket, Star } from 'lucide-react';
 import { allEvents } from '@/lib/data';
 import { Badge } from '@/components/ui/badge';
@@ -15,7 +17,9 @@ import { Separator } from '@/components/ui/separator';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 
-export default function EventDetailPage({ params: { id } }: { params: { id: string } }) {
+export default function EventDetailPage() {
+  const params = useParams();
+  const id = params.id as string;
   const event = allEvents.find((e) => e.id === id);
 
   if (!event) {

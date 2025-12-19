@@ -1,6 +1,6 @@
 'use client';
 
-import { notFound } from 'next/navigation';
+import { notFound, useParams } from 'next/navigation';
 import { allEvents } from '@/lib/data';
 import { Calendar, Clock, MapPin } from 'lucide-react';
 import { SeatSelector } from '@/components/booking/seat-selector';
@@ -8,7 +8,9 @@ import { PaymentForm } from '@/components/booking/payment-form';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { useState } from 'react';
 
-export default function BookingPage({ params: { id } }: { params: { id: string } }) {
+export default function BookingPage() {
+  const params = useParams();
+  const id = params.id as string;
   const event = allEvents.find((e) => e.id === id);
   const [selectedSeats, setSelectedSeats] = useState<string[]>([]);
 
