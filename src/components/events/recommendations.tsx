@@ -42,10 +42,10 @@ export function Recommendations() {
           {[...Array(3)].map((_, i) => (
             <CarouselItem key={i} className="md:basis-1/2 lg:basis-1/3 p-1">
               <Card className="overflow-hidden">
-                <Skeleton className="h-48 w-full" />
                 <CardContent className="p-4">
                   <Skeleton className="h-6 w-3/4 mb-2" />
                   <Skeleton className="h-4 w-1/2" />
+                  <Skeleton className="h-4 w-1/2 mt-2" />
                 </CardContent>
               </Card>
             </CarouselItem>

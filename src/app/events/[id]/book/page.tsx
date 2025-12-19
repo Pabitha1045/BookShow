@@ -1,10 +1,9 @@
 import { notFound } from 'next/navigation';
 import { allEvents } from '@/lib/data';
-import Image from 'next/image';
 import { Calendar, Clock, MapPin } from 'lucide-react';
 import { SeatSelector } from '@/components/booking/seat-selector';
 import { PaymentForm } from '@/components/booking/payment-form';
-import { Card } from '@/components/ui/card';
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 
 export default function BookingPage({ params }: { params: { id: string } }) {
   const event = allEvents.find((e) => e.id === params.id);
@@ -25,18 +24,10 @@ export default function BookingPage({ params }: { params: { id: string } }) {
 
         <div className="lg:col-span-1">
           <Card className="sticky top-24">
-            <div className="relative h-48 w-full">
-              <Image
-                src={event.imageUrl}
-                alt={event.title}
-                layout="fill"
-                objectFit="cover"
-                className="rounded-t-lg"
-                data-ai-hint={event.imageHint}
-              />
-            </div>
-            <div className="p-4 space-y-3">
-              <h2 className="font-headline text-xl font-bold">{event.title}</h2>
+            <CardHeader>
+                <CardTitle className="font-headline text-xl font-bold">{event.title}</CardTitle>
+            </CardHeader>
+            <CardContent>
               <div className="text-sm text-muted-foreground space-y-2">
                 <div className="flex items-center gap-2">
                     <Calendar className="h-4 w-4" />
@@ -51,7 +42,7 @@ export default function BookingPage({ params }: { params: { id: string } }) {
                     <span>{event.venue}</span>
                 </div>
               </div>
-            </div>
+            </CardContent>
           </Card>
         </div>
 

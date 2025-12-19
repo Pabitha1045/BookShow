@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { Calendar, MapPin } from 'lucide-react';
 import type { Event } from '@/lib/types';
@@ -19,18 +18,8 @@ interface EventCardProps {
 export function EventCard({ event }: EventCardProps) {
   return (
     <Card className="flex flex-col h-full overflow-hidden transition-transform duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl">
-      <CardHeader className="p-0 relative">
-        <Link href={`/events/${event.id}`}>
-          <Image
-            src={event.imageUrl}
-            alt={event.title}
-            width={400}
-            height={event.category === 'Movie' ? 600 : 400}
-            className="w-full object-cover"
-            data-ai-hint={event.imageHint}
-          />
-        </Link>
-        <Badge className="absolute top-2 right-2" variant={event.category === 'Movie' ? 'default' : 'secondary'}>{event.category}</Badge>
+      <CardHeader className="p-4">
+        <Badge className="w-fit" variant={event.category === 'Movie' ? 'default' : 'secondary'}>{event.category}</Badge>
       </CardHeader>
       <CardContent className="p-4 flex-grow">
         <CardTitle className="font-headline text-lg mb-2">

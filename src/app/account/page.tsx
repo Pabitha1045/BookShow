@@ -17,7 +17,6 @@ import { Label } from '@/components/ui/label';
 import { Separator } from '@/components/ui/separator';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { userBookings, userProfile } from '@/lib/data';
-import Image from 'next/image';
 import Link from 'next/link';
 import { Calendar } from 'lucide-react';
 
@@ -55,14 +54,7 @@ export default function AccountPage() {
             <CardContent className="space-y-6">
               {userBookings.length > 0 ? (
                 userBookings.map((booking) => (
-                  <div key={booking.id} className="flex items-center gap-4 p-4 rounded-lg border">
-                    <Image
-                      src={booking.eventImageUrl}
-                      alt={booking.eventTitle}
-                      width={120}
-                      height={80}
-                      className="rounded-md object-cover aspect-[3/2]"
-                    />
+                  <div key={booking.id} className="flex items-start gap-4 p-4 rounded-lg border">
                     <div className="flex-1">
                       <h3 className="font-semibold font-headline">{booking.eventTitle}</h3>
                       <div className="flex items-center gap-2 text-sm text-muted-foreground mt-1">
