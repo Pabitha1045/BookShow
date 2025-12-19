@@ -25,7 +25,8 @@ export function EventCard({ event }: EventCardProps) {
             <Image 
                 src={event.imageUrl} 
                 alt={event.title}
-                fill
+                width={600}
+                height={900}
                 className="object-cover"
                 data-ai-hint={event.imageHint}
             />
