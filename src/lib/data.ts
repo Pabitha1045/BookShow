@@ -9,7 +9,7 @@ export const allEvents: Event[] = [
     time: '19:00',
     venue: 'Metro Cinemas',
     price: 15,
-    imageUrl: '/images/jailer.jpg',
+    imageUrl: 'https://th.bing.com/th/id/OIP.ZbW_Wl4-0agrWCuwCdJzggHaLk?w=200&h=312&c=7&r=0&o=7&cb=ucfimg2&dpr=1.3&pid=1.7&rm=3&ucfimg=1',
     imageHint: 'action movie',
     synopsis: 'A retired jailer goes on a manhunt to find his son\'s killers. But the road leads him to a familiar, dark path.',
     seating: { rows: 8, cols: 12, unavailable: ['C5', 'C6', 'D10', 'F8'] },

@@ -33,6 +33,12 @@ const nextConfig: NextConfig = {
         hostname: 'images.filmibeat.com',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'th.bing.com',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
