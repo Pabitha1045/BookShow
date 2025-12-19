@@ -1,7 +1,7 @@
 export type Event = {
   id: string;
   title: string;
-  category: 'Movie' | 'Concert' | 'Theatre' | 'Sports';
+  category: 'Movie' | 'Concert' | 'Theatre' | 'Sports' | 'Series';
   date: string;
   time: string;
   venue: string;

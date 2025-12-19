@@ -80,6 +80,18 @@ export const allEvents: Event[] = [
     synopsis: 'An alcoholic professor is sent to a juvenile school, where he clashes with a gangster who uses the children for criminal activities.',
     seating: { rows: 8, cols: 10, unavailable: ['E1', 'E2', 'F5', 'H7'] },
   },
+  {
+    id: '7',
+    title: 'Strange Things',
+    category: 'Series',
+    date: '2024-11-01',
+    time: '20:00',
+    venue: 'Streaming Platform',
+    price: 25,
+    imageUrl: 'https://th.bing.com/th/id/OIP.lEeL2C-SLLhYWPg64YKB6wHaKl?w=208&h=297&c=7&r=0&o=7&cb=ucfimg2&dpr=1.3&pid=1.7&rm=3&ucfimg=1',
+    imageHint: 'sci-fi series',
+    synopsis: 'When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl.',
+  }
 ];
 
 export const userProfile: UserProfile = {
