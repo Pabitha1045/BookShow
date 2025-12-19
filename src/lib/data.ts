@@ -62,7 +62,7 @@ export const allEvents: Event[] = [
     time: '19:30',
     venue: 'CityPlex',
     price: 16,
-    imageUrl: '/beast.jpg',
+    imageUrl: 'https://th.bing.com/th/id/OIP.mUojoPvxhomaTl-2psFPdQHaLP?w=202&h=307&c=7&r=0&o=7&cb=ucfimg2&dpr=1.3&pid=1.7&rm=3&ucfimg=1',
     imageHint: 'hostage thriller',
     synopsis: 'A former RAW agent is trapped in a shopping mall when it is hijacked by terrorists. He must now single-handedly take them all down to save the hostages.',
     seating: { rows: 7, cols: 14, unavailable: ['A4', 'C9', 'F11', 'G2'] },
