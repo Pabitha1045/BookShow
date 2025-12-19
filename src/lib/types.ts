@@ -9,7 +9,6 @@ export type Event = {
   imageUrl: string;
   imageHint: string;
   synopsis: string;
-  reviews: { rating: number; text: string; author: string }[];
   trailerUrl?: string;
   seating?: {
     rows: number;

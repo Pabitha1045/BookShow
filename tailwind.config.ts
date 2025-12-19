@@ -17,8 +17,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        body: ['PT Sans', 'sans-serif'],
-        headline: ['Space Grotesk', 'sans-serif'],
+        body: ['Poppins', 'sans-serif'],
+        headline: ['Teko', 'sans-serif'],
         code: ['monospace'],
       },
       colors: {
