@@ -48,7 +48,7 @@ export const allEvents: Event[] = [
     time: '18:30',
     venue: 'Royal Picturehouse',
     price: 22,
-    imageUrl: '/images/ponniyin-selvan.jpg',
+    imageUrl: 'https://th.bing.com/th/id/OIP.Zl3Sg6o9E7MGXWYn6J9gpgHaKH?w=123&h=180&c=7&r=0&o=7&cb=ucfimg2&dpr=1.3&pid=1.7&rm=3&ucfimg=1',
     imageHint: 'historical drama',
     synopsis: 'Vandiyathevan sets out to cross the Chola land to deliver a message from the Crown Prince Aditha Karikalan. The land is rife with conspiracies and he is tasked with a mission that could change the fate of the Chola dynasty.',
     seating: { rows: 10, cols: 10, unavailable: ['B2', 'C8', 'D4', 'J9'] },
