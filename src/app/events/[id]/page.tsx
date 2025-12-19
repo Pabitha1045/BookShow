@@ -15,7 +15,8 @@ import { Separator } from '@/components/ui/separator';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 
-export default function EventDetailPage({ params: { id } }: { params: { id: string } }) {
+export default function EventDetailPage({ params }: { params: { id: string } }) {
+  const { id } = params;
   const event = allEvents.find((e) => e.id === id);
 
   if (!event) {

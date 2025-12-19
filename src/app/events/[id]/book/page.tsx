@@ -8,7 +8,8 @@ import { PaymentForm } from '@/components/booking/payment-form';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { useState } from 'react';
 
-export default function BookingPage({ params: { id } }: { params: { id: string } }) {
+export default function BookingPage({ params }: { params: { id: string } }) {
+  const { id } = params;
   const event = allEvents.find((e) => e.id === id);
   const [selectedSeats, setSelectedSeats] = useState<string[]>([]);
 
