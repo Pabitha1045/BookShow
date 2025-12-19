@@ -47,7 +47,7 @@ export function SeatSelector({ event, selectedSeats, onSelectedSeatsChange }: Se
     );
   };
 
-  const totalPrice = selectedSeats.length * price;
+  const totalPrice = (selectedSeats || []).length * price;
 
   return (
     <Card className="w-full">
