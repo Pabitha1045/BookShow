@@ -27,6 +27,7 @@ import { Input } from '@/components/ui/input';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Logo } from '../icons';
 import { useDebouncedCallback } from 'use-debounce';
+import { userProfile } from '@/lib/data';
 
 const navLinks = [
   { href: '/', label: 'Home', icon: Home },
@@ -121,8 +122,13 @@ export function Header() {
           <DropdownMenuTrigger asChild>
             <Button variant="secondary" size="icon" className="rounded-full">
               <Avatar>
-                <AvatarImage src="https://picsum.photos/seed/avatar1/100/100" alt="@shadcn" />
-                <AvatarFallback>AR</AvatarFallback>
+                <AvatarImage src="https://picsum.photos/seed/avatar1/100/100" alt={userProfile.name} />
+                <AvatarFallback>
+                  {userProfile.name
+                    .split(' ')
+                    .map((n) => n[0])
+                    .join('')}
+                </AvatarFallback>
               </Avatar>
               <span className="sr-only">Toggle user menu</span>
             </Button>
