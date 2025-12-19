@@ -9,7 +9,8 @@ import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { useState } from 'react';
 
 export default function BookingPage({ params }: { params: { id: string } }) {
-  const event = allEvents.find((e) => e.id === params.id);
+  const { id } = params;
+  const event = allEvents.find((e) => e.id === id);
   const [selectedSeats, setSelectedSeats] = useState<string[]>([]);
 
   if (!event) {
