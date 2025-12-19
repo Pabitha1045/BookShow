@@ -39,6 +39,12 @@ const nextConfig: NextConfig = {
         hostname: 'th.bing.com',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'tse1.mm.bing.net',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
