@@ -1,3 +1,52 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "movie1",
+      "description": "Sci-fi movie poster",
+      "imageUrl": "https://images.unsplash.com/photo-1590562177087-ca6af9bb82ea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzY2ktZmklMjBtb3ZpZXxlbnwwfHx8fDE3NjYwNjY0MjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sci-fi movie"
+    },
+    {
+      "id": "movie2",
+      "description": "Action movie poster",
+      "imageUrl": "https://images.unsplash.com/photo-1534188278934-76700c2da08b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhY3Rpb24lMjBtb3ZpZXxlbnwwfHx8fDE3NjYwNzY1MzZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "action movie"
+    },
+    {
+      "id": "movie3",
+      "description": "Comedy movie poster",
+      "imageUrl": "https://images.unsplash.com/photo-1758525862263-af89b090fb56?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjb21lZHklMjBtb3ZpZXxlbnwwfHx8fDE3NjYxMTYzOTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "comedy movie"
+    },
+    {
+      "id": "concert1",
+      "description": "Rock band on stage",
+      "imageUrl": "https://images.unsplash.com/photo-1590721791974-d6c8ca43f6bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxyb2NrJTIwY29uY2VydHxlbnwwfHx8fDE3NjYxMTYzOTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "rock concert"
+    },
+    {
+      "id": "concert2",
+      "description": "Pop singer performing",
+      "imageUrl": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb3AlMjBjb25jZXJ0fGVufDB8fHx8MTc2NjExNjM5NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "pop concert"
+    },
+    {
+      "id": "theatre1",
+      "description": "Stage play with actors",
+      "imageUrl": "https://images.unsplash.com/photo-1678655978189-c1145706996f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxzdGFnZSUyMHBsYXl8ZW58MHx8fHwxNzY2MTE2Mzk0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "stage play"
+    },
+    {
+      "id": "sports1",
+      "description": "Football match in a stadium",
+      "imageUrl": "https://images.unsplash.com/photo-1544366981-43d8d59eeba9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxmb290YmFsbCUyMG1hdGNofGVufDB8fHx8MTc2NjExMDU3N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "football match"
+    },
+    {
+      "id": "user-avatar",
+      "description": "User avatar",
+      "imageUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjYwODgyNTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person portrait"
+    }
+  ]
 }
